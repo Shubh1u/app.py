@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h1>Dashboard</h1>
+  <p>Welcome, {{ current_user.name }}!</p>
+  <ul class="list">
+    <li><strong>Email:</strong> {{ current_user.email }}</li>
+    <li><strong>Member since:</strong> {{ current_user.created_at.strftime('%d %b %Y, %I:%M %p') }}</li>
+  </ul>
+  <p>This route is protected. Only logged-in users can see it.</p>
+</section>
+{% endblock %}
